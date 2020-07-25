@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>弹出菜单</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="/vendor/honey-switch/lib/honeySwitch.css">
+</head>
+<body>
+    <div class="i-page-popup">
+        <ul>
+            <li>
+                <img src="/images/share_16.png" />
+                <span class="i-title">自动分享提取密码</span>
+                <span class="i-description">与所有人分享网盘提取密码（默认开启）</span>
+                <div class="i-switch">
+                    <span id="i_share" class="switch-on"></span>
+                </div>
+            </li>
+            <li class="i-link" data-href="http://39.108.55.167:8080/yunsearch/">
+                <img src="/images/search_16.png" />
+                <span class="i-title">聚合搜索</span>
+                <span class="i-description">搜索海量、高质量的网盘资源</span>
+                <div class="i-next">
+                    <img src="/images/next_16.png" />
+                </div>
+            </li>
+            <li class="i-link" data-href="http://39.108.55.167:8080/yunsearch/">
+                <img src="/images/help_16.png" />
+                <span class="i-title">使用帮助</span>
+                <span class="i-description">学习如何使用本扩展</span>
+                <div class="i-next">
+                    <img src="/images/next_16.png" />
+                </div>
+            </li>
+            <li class="i-link" data-href="http://39.108.55.167:8080/yunsearch/">
+                <img src="/images/home_16.png" />
+                <span class="i-title">访问官网</span>
+                <span class="i-description i-update"></span>
+                <div class="i-next">
+                    <img src="/images/next_16.png" />
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/vendor/honey-switch/lib/honeySwitch.js"></script>
+    <script src="/js/popup.js"></script>
+</body>
+</html>

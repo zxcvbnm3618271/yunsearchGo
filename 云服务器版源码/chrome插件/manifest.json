@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "聚合搜索",
+    "version": "2020.4",
+    "author": "Ben",
+    
+    "default_locale": "zh_CN",
+    "description": "提取码自动填写插件",
+    "icons": {
+        "19": "images/icon_19.png",
+        "38": "images/icon_38.png",
+        "128": "images/icon_128.png"
+    },
+    "homepage_url": "http://39.108.55.167:8080/yunsearch/",
+
+    "options_ui": {
+        "page": "options.html",
+        "chrome_style": true
+    },
+
+    "permissions": [
+        "*://39.108.55.167:8080/yunsearch/*",
+        "https://pan.baidu.com/s/*",
+        "tabs",
+        "storage",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+    
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon_19.png",
+            "38": "images/icon_38.png"
+        },
+        "default_title": "聚合搜索",
+        "default_popup": "popup.html"
+    },
+    
+    "background": {
+        "scripts": ["js/lib.js", "js/background.js"],
+        "persistent": true
+    },
+
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+
+    "content_scripts": [
+        {
+            "matches": ["https://pan.baidu.com/share/init*", "http://pan.baidu.com/share/init*", "https://pan.baidu.com/s/*", "http://pan.baidu.com/s/*"],
+            "js": ["vendor/jquery/jquery-3.2.1.min.js", "js/lib.js", "js/content-script-yp.js"],
+            "run_at": "document_start"
+        },
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["vendor/jquery/jquery-3.2.1.min.js", "js/lib.js", "js/content-script-all.js"],
+            "run_at": "document_start"
+        }
+    ]
+}

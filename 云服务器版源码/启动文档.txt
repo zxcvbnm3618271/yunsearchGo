@@ -1,0 +1,13 @@
+云服务端：
+ps -ef |grep yunsearch
+kill -9 线程号
+nohup java -jar yunsearch.jar >yunsearch.out  2>&1 &
+su es
+source ~/.bash_profile
+修改conf里的jvm配置-xms512m
+./elasticsearch -d
+windows：
+进入logstash执行指令：bin/logstash.bat -f config/jdbc.conf
+如果需要可视化ES可以启动Kibana，或者使用ES-head，其中ES-head的启动方法
+进入elasticseach-head文件夹，运行nohup grunt server &exit
+

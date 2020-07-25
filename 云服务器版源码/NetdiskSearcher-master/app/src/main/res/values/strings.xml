@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">聚合搜索</string>
+	<string name="search_button_text">搜 索</string>
+	<string name="exit_toast_message">再按一次返回键退出</string>
+	<string name="empty_toast_message">搜索内容不能为空</string>
+	<string name="search_result">资源详情</string>
+	<string name="search_list">资源列表</string>
+	<string name="copy_success">链接复制成功</string>
+	<string name="copy">复 制</string>
+	<string name="open">打 开</string>
+	<string name="share">分 享</string>
+	<string name="set_default_interface">已设置为默认搜索接口</string>
+	<string name="list_no_result">搜索不到相应的数据呢⊙﹏⊙</string>
+	<string name="input_hint">请输入要搜索的关键词</string>
+    <string name="update_log_title">更新日志</string>
+	<string name="new_version_title">发现新版本</string>
+	<string name="update_button">立即更新</string>
+</resources>

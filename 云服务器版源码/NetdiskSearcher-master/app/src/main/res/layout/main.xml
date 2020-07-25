@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:background="@color/white">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"/>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal">
+
+		<ImageView
+			android:layout_width="80dp"
+			android:layout_height="80dp"
+			android:id="@+id/siteIcon"
+			android:layout_marginTop="80dp"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:gravity="center"
+			android:textColor="@color/color_333"
+			android:textStyle="bold"
+			android:id="@+id/selectName"
+			android:text="盘搜搜"
+			android:layout_marginTop="15dp"
+			android:layout_marginBottom="25dp">
+
+		</TextView>
+
+		<EditText
+			android:layout_width="match_parent"
+			android:ems="10"
+			android:layout_height="wrap_content"
+			android:background="@drawable/edittext_background"
+			android:layout_marginLeft="35dp"
+			android:layout_marginRight="35dp"
+			android:paddingLeft="20dp"
+			android:paddingRight="20dp"
+			android:paddingTop="12dp"
+			android:paddingBottom="12dp"
+			android:singleLine="true"
+			android:id="@+id/searchEditText"
+			android:textStyle="bold"
+			android:textSize="16sp"
+			android:imeOptions="actionSearch"
+			android:hint="@string/input_hint"
+			android:textColorHint="@color/color_hint"
+			android:textColor="@color/color_333"/>
+
+		<Button
+			android:layout_marginTop="25dp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:background="@drawable/selector"
+			android:id="@+id/searchButton"
+			android:textColor="@color/white"
+			android:textStyle="bold"
+			android:text="@string/search_button_text"
+			android:layout_marginBottom="16dp"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1.0"
+		android:gravity="bottom|center_horizontal">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Small Text"
+			android:textAppearance="?android:attr/textAppearanceSmall"
+			android:textColor="@color/color_ccc"
+			android:layout_marginBottom="10dp"
+			android:id="@+id/version"
+			android:alpha="0.6"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

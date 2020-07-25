@@ -1,0 +1,27 @@
+fans:
+    run: true
+follow:
+    run: true
+data:
+    run: true
+
+logging:
+    config: classpath:logback-spring.xml
+
+server:
+  context-path: /yunsearch
+
+spring:
+    profiles:
+        active: prod
+    freemarker:
+        cache: false
+        suffix: .ftl
+        request-context-attribute: request
+    jpa:
+      hibernate:
+        ddl-auto: update
+    http:
+      multipart:
+        max-file-size: 15Mb
+        max-request-size: 20Mb

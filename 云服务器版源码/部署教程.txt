@@ -1,0 +1,21 @@
+elasticsearch需要和yunsearch.jar部署在同一台服务器上
+修改yunsearch的mysql的连接地址
+在需要使用的mysql上运行LinkShare.sql脚本
+进入NetdiskSearch修改关于yunsearchAPI的地址
+进入chrome插件项目修改ServerAPI的地址
+修改logstash的config文件夹下的jdbc.conf，包括jdbc链接和绝对路径
+部署顺序：
+1.运行ES
+2.运行jar
+3.运行logstash
+4.设置mysql定时器：
+CREATE DEFINER=`root`@`%` PROCEDURE `mypro`()
+BEGIN
+DELETE from yun_data where state!='VALID';
+alter table yun_data auto_increment= 1;
+SET @rownum = 0;
+UPDATE yun_data SET id = @rownum :=@rownum +1;
+end
+通过事件调用方法：
+call mypro()
+
